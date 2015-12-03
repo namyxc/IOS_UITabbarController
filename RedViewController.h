@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RedViewController.h
 //  UITabbarControllerDemo
 //
 //  Created by rentit on 2015. 11. 10..
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RedViewController : UIViewController
 
 @end
-

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "RedViewController.h"
+#import "YellowViewController.h"
+#import "GreenViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    
+    UITabBarController* tabbar =[UITabBarController new];
+    tabbar.viewControllers = @[
+                               [RedViewController new],
+                               [GreenViewController new],
+                               [YellowViewController new]
+                               ];
+    
+    self.window.rootViewController = tabbar;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
